@@ -22,7 +22,7 @@ public class Main {
         int correctAnswers = 0;
 
         System.out.println("Welcome to the Kenzie Capstone Quiz!");
-        System.out.println("There will be 10 questions total.");
+        System.out.println("There will be 10 questions total. ARE YOU READY? :)");
         System.out.println("Enter your name: ");
         Scanner scannerName = new Scanner(System.in);
         String name = scannerName.nextLine();
