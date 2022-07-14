@@ -110,8 +110,22 @@ public class Main {
                         }
 
                     System.out.println("Thank you for playing " + name + "!");
-                    System.out.println("****************************************");
-                    System.exit(0);
+                    System.out.println("Would you like to play again? (y/n)");
+                    Scanner scanner2 = new Scanner(System.in);
+                    String answer2 = scanner2.nextLine();
+                    if (answer2.equalsIgnoreCase("y")) {
+                        score = 0;
+                        questionNumber = 1;
+                        wrongAnswers = 0;
+                        correctAnswers = 0;
+                        j = -1;
+                    } else {
+                        System.out.println("Thank you for playing " + name + "!");
+                        System.out.println("Goodbye!");
+                        System.out.println("****************************************");
+                        System.exit(0);
+                    }
+
                 }
                 }
             }
