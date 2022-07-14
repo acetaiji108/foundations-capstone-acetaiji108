@@ -17,6 +17,5 @@ public class DTO {
     }
 
     public void getData() {
-
     }
 }
