@@ -33,7 +33,8 @@ public class Main {
             for (int j = 0; j < 10; j++) {
 
                 int random = new Random().nextInt(100);
-
+                System.out.println("****************************************");
+                System.out.println("Category: " + dto.clues.get(random).category.title);
                 System.out.println("Question " + questionNumber +"/10"+": " + dto.clues.get(random).question);
                 System.out.println("Answer: " + dto.clues.get(random).answer);
                 System.out.println("Enter your answer: ");
