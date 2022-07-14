@@ -1,8 +1,4 @@
 package com.kenzie.app;
-
-// import necessary libraries
-
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
@@ -13,10 +9,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    static final String URL = "https://jservice.kenzie.academy/api/clues";
-
     public static void main(String[] args) throws IOException, NullPointerException, JsonProcessingException {
-        //Write main execution code here
+
         File file = new File("Clues");
         ObjectMapper objMapper = new ObjectMapper();
         DTO dto = new DTO();
@@ -68,23 +62,27 @@ public class Main {
                     questionNumber++;
                     wrongAnswers ++;
 
-                    if(wrongAnswers == 1 && score == 0 ){
+                    if(wrongAnswers == 1){
                             System.out.println("You have " + wrongAnswers + " wrong answer!");
                             System.out.println("You have " + score + " points.");
 
                         } else {
 
-                        if (wrongAnswers == 1 && score == 1) {
-                            System.out.println("You have " + wrongAnswers + " wrong answer!");
-                            System.out.println("You have " + score + " point.");
+                        if (wrongAnswers < 10) {
+                            System.out.println("You have " + wrongAnswers + " wrong answers!");
+                            System.out.println("You have " + score + " points.");
 
                         } else {
-                            if(wrongAnswers == 2 && score == 1) {
+                            if(score == 1) {
                                 System.out.println("You have " + wrongAnswers + " wrong answers!");
                                 System.out.println("You have " + score + " point.");
                             }
-                            System.out.println("You have " + wrongAnswers + " wrong answers!");
-                            System.out.println("You have " + score + " points.");
+                            else {
+                                if(score == 0){
+                                    System.out.println("You have " + wrongAnswers + " wrong answers!");
+                                    System.out.println("You have " + score + "points.");
+                                }
+                            }
                         }
                     }
                 }
@@ -125,26 +123,8 @@ public class Main {
                         System.out.println("****************************************");
                         System.exit(0);
                     }
-
                 }
                 }
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

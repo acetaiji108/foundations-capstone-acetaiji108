@@ -6,7 +6,6 @@ import java.util.List;
 
 public class DTO {
 
-
     @JsonProperty("clues")
     public List<Clues> clues;
 
