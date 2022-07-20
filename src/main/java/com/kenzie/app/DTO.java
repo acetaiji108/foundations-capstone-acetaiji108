@@ -18,4 +18,13 @@ public class DTO {
 
     public void getData() {
     }
+
+    public List<Clues> getClues() {
+        return clues;
+    }
+
+    public void setClues(List<Clues> clues) {
+        this.clues = clues;
+    }
 }
+
